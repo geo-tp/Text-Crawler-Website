@@ -39,17 +39,17 @@ You can configurate the API with the file `/backend/main/settings.py`.
 
 Dataset should be placed into `backend/media/`. Root folders of `/media` will be considered as a category. You can have many folders and subfolders you want.
 
-***Create Python Env
+Create Python env : 
 ```python -m venv NameOfEnv```
 
-***Activate you env
+Activate you env : 
 ```source /NameOfEnv/bin/activate```
 
-***Install requirements
+Install requirements : 
 into `backend/` folder, type
 ```python -m pip install -r requirements```
 
-***Dev Server
+Dev Server : 
 ```python manage.py runserver```
 
 
@@ -70,16 +70,16 @@ SourcePage : `http://url/sources`
 You need to set you API url into `frontend/src/config/general.js` like `http://localhost:8000/api/v1/`
 
 
-***Install dependencies
-In `frontend/` folder, type
+Install dependencies
+In `frontend/` folder, type : 
 ```npm install```
 
 
-***Dev Server
+Dev Server : 
 ```npm start``
 
 
-***Run Build
+Run Build : 
 ```npm run build```
 
 

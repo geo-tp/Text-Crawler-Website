@@ -1,0 +1,58 @@
+// RESPONSIVE
+
+@mixin small-mobile-design {
+  @media screen and (max-width: map-get($breakpoints, small-mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile-design {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet-design {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin wide-screen-design {
+  @media screen and (min-width: map-get($breakpoints, wide-screen)) {
+    @content;
+  }
+}
+@mixin small-height {
+  @media screen and (max-height: 700px) {
+    @content;
+  }
+}
+
+@mixin medium-height {
+  @media screen and (max-height: 900px) {
+    @content;
+  }
+}
+
+// SHADOW
+
+@mixin big-shadow-inset {
+  box-shadow: 0px 0px 2px black inset;
+}
+
+@mixin big-shadow {
+  box-shadow: 0px 2px 15px map-get($COLOR_PALETTE, bg);
+}
+
+@mixin medium-shadow {
+  box-shadow: 0px 0px 5px map-get($COLOR_PALETTE, bg);
+}
+
+@mixin small-shadow {
+  box-shadow: 0px 0px 6px map-get($COLOR_PALETTE, bg);
+}
+
+@mixin tiny-shadow {
+  box-shadow: 0px 0px 2px map-get($COLOR_PALETTE, bg);
+}

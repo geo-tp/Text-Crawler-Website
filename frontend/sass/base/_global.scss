@@ -1,0 +1,14 @@
+html {
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $color-link2;
+  text-decoration: none;
+}

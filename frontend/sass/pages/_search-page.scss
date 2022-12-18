@@ -1,0 +1,7 @@
+.search-page {
+  margin-left: 150px;
+
+  @include tablet-design {
+    margin-left: 10px;
+  }
+}

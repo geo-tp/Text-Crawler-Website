@@ -1,0 +1,15 @@
+$color-bg: #202123;
+$color-bg2: #303133;
+$color-text: #bdc1c5;
+$color-text2: #fdc230;
+$color-link: #8ab4f7;
+$color-link2: #c58af8;
+$color-border: rgba(223, 225, 229, 0);
+
+// RESPONSIVE
+$breakpoints: (
+  small-mobile: 420px,
+  mobile: 768px,
+  tablet: 1200px,
+  wide-screen: 1400px,
+);

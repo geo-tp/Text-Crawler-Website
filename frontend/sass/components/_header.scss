@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  border-bottom: 2px solid $color-bg2;
+  padding: 0px 10px;
+
+  .logo {
+    margin-right: 20px;
+  }
+}

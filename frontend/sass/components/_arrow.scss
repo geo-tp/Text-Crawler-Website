@@ -1,0 +1,25 @@
+.arrow {
+  background-color: $color-bg2;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+
+  &--left {
+    left: 10px;
+  }
+
+  &--right {
+    right: 10px;
+  }
+
+  & i {
+    font-size: 2em;
+    color: $color-link;
+  }
+
+  :hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,16 @@
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  color: $color-text;
+  margin-bottom: 30px;
+  align-items: center;
+  position: relative;
+
+  & p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,30 @@
+// UTILS
+@import "./utils/variables";
+@import "./utils/mixins";
+
+// BASE
+@import "./base/global";
+@import "./base/visibility";
+
+// COMPONENTS
+@import "./components/logo";
+@import "./components/search-bar";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/no-result";
+@import "./components/result";
+@import "./components/results-count";
+@import "./components/arrow";
+@import "./components/loader";
+@import "./components/error-message";
+
+// CONTAINERS
+@import "./containers/centered-container";
+@import "./containers/result-container";
+@import "./containers/pagination-container";
+@import "./containers/modal-container";
+
+// PAGES
+@import "./pages/homepage.scss";
+@import "./pages/source-page.scss";
+@import "./pages/search-page";

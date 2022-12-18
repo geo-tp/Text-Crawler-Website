@@ -1,0 +1,31 @@
+.search-bar {
+  &__icon {
+    // font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    margin-left: 5px;
+  }
+  form {
+    position: relative;
+
+    & input {
+      background-color: $color-bg;
+      color: $color-text;
+      border: 3px solid $color-bg2;
+      padding: 5px;
+      padding-left: 40px;
+      border-radius: 20px;
+      height: 30px;
+
+      &:focus {
+        background-color: $color-bg2;
+        outline: none;
+      }
+      @include small-mobile-design {
+        width: 140px;
+      }
+    }
+  }
+}

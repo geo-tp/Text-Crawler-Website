@@ -1,0 +1,30 @@
+.centered-container {
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .logo {
+    & img {
+      width: 250px;
+    }
+  }
+
+  & .search-bar {
+    margin-top: 20px;
+    & form {
+      & input {
+        width: 400px;
+
+        @include small-mobile-design {
+          width: 180px;
+        }
+      }
+
+      & i {
+        font-size: 1.1em;
+      }
+    }
+  }
+}

@@ -37,7 +37,7 @@ The server must use a Linux distribution where `grep` is installed, a subprocess
 
 You can configurate the API with the file `/backend/main/settings.py`.
 
-Dataset should be placed into `backend/media/`. Root folders of `/media` will be considered as a category. You can have many folders and subfolders you want.
+Dataset should be placed into `backend/media/`. Folders of `/media` will be considered as a category. You can have many folders and subfolders you want.
 
 Create Python env : 
 ```python -m venv NameOfEnv```
@@ -53,14 +53,14 @@ Dev Server :
 ```python manage.py runserver```
 
 
-There is only one endpoints : http://url/search/?=query
+There is only one endpoints : http://url/search/?q=query
 
 
 
 
 - Frontend
 
-Created with `React` and `Sass`.
+Created with `React` and `Sass`. Node version `17.9.1` and npm version `8.11.0`
 
 HomePage   : `http://url/`
 SearchPage : `http://url/search/:query`
@@ -88,7 +88,7 @@ Run Build :
 - Deploy
 
 Change Django secret key located in `backend/main/settings.py`
-Dont forget to add your domain name in ```/backend/alpha_archives/settings.py```  ```ALLOWED_HOSTS=["yourDomain.com"]```
+Dont forget to add your domain name in ```/backend/main/settings.py```  ```ALLOWED_HOSTS=["yourDomain.com"]```
 Serve Django API with gunicorn
 Make react build with ```npm run build``` and import in to you server.
 
@@ -124,7 +124,7 @@ Optimize search speed
 
 The `grep` command that it uses to search occurences must crawl the dataset at every request.
 
-If your dataset is quite small (less than 100mb), you probably don't need to optimize the search speed and you could run it on a basic HDD.
+If your dataset is quite small (less than 100mb), you probably don't need to optimize the search speed and you could run it on a basic HDD as storage.
 
 If your dataset is quite big (~1gb), you probably don't need to optimize the search speed but you surely will need to use a SSD as storage on your server.
 

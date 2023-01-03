@@ -1,3 +1,25 @@
 .source-page {
   padding: 10px;
+  margin-left: 10px;
+
+  & h2 {
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  & li {
+    margin-left: 20px;
+  }
+
+  @include mobile-design {
+    margin-left: 0px;
+
+    & h2 {
+      margin-left: 5px;
+    }
+
+    & li {
+      margin-left: 0px;
+    }
+  }
 }

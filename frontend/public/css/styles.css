@@ -1,3 +1,11 @@
+@keyframes appear-slowly {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html {
   background-color: #202123;
   color: #bdc1c5;
@@ -250,6 +258,15 @@ a:visited {
   padding: 20px;
 }
 
+.caching-message {
+  opacity: 0;
+  animation: 2s appear-slowly normal;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  font-size: 0.7em;
+  text-align: center;
+}
+
 .centered-container {
   height: 96vh;
   display: flex;
@@ -327,6 +344,25 @@ a:visited {
 
 .source-page {
   padding: 10px;
+  margin-left: 10px;
+}
+.source-page h2 {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.source-page li {
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .source-page {
+    margin-left: 0px;
+  }
+  .source-page h2 {
+    margin-left: 5px;
+  }
+  .source-page li {
+    margin-left: 0px;
+  }
 }
 
 .search-page {

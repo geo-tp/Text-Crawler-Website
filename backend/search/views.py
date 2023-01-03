@@ -18,7 +18,7 @@ class SearchView(APIView):
         keywords = request.query_params.get("q")
         
         unformatted_results = self.grepper.by_keywords(keywords)
-        results = self.parser.format_grep_results(unformatted_results)
+        results = self.parser.format_grep_results(unformatted_results, keywords)
         paginated_results = self.paginator.paginate_queryset(results, request)
 
         return self.paginator.get_paginated_response(paginated_results)

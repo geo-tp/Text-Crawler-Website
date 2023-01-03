@@ -1,6 +1,7 @@
 // UTILS
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 
 // BASE
 @import "./base/global";
@@ -17,6 +18,7 @@
 @import "./components/arrow";
 @import "./components/loader";
 @import "./components/error-message";
+@import "./components/caching-message";
 
 // CONTAINERS
 @import "./containers/centered-container";

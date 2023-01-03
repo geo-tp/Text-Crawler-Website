@@ -10,8 +10,8 @@ import { Loader } from "../components/Loader";
 import { ModalContainer } from "../containers/ModalContainer";
 import { useEffect, useState } from "react";
 import { ErrorMessage } from "../components/ErrorMessage";
-import { useQuery } from "react-query";
 import { fetchJson } from "../api/fetchJson";
+import { CachingMessage } from "../components/CachingMessage";
 
 export const Searchpage = () => {
   const { query } = useParams("query");
@@ -74,6 +74,7 @@ export const Searchpage = () => {
       {isLoading && (
         <ModalContainer>
           <Loader />
+          <CachingMessage />
         </ModalContainer>
       )}
 

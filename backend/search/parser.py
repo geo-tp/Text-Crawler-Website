@@ -4,7 +4,7 @@ class Parser:
 
     categories = RESULT_CATEGORY
 
-    def format_grep_results(self, results) -> list:
+    def format_grep_results(self, results, query) -> list:
 
         formatted_results_by_cat = []
 
@@ -15,14 +15,21 @@ class Parser:
         for line in splited_results:
 
             if (line):
-                result = self._format_result(line)
+                result = self._format_result(line, query)
 
                 if (result):
                     try:
                         indexOfCat = self.categories.index(result["source"])
-                        formatted_results_by_cat[indexOfCat].append(result)
+                        # formatted_results_by_cat[indexOfCat].append(result)
                     except:
-                        formatted_results_by_cat[len(formatted_results_by_cat)-1].append(result)
+                        indexOfCat = len(formatted_results_by_cat)-1
+
+                    cat_array = formatted_results_by_cat[indexOfCat]
+
+                    # found_result = self._find_result_in_dict(result, cat_array)
+
+                    # if found_result is None:
+                    formatted_results_by_cat[indexOfCat].append(result)
 
         sortedResults = []
         for catArray in formatted_results_by_cat:
@@ -30,7 +37,19 @@ class Parser:
 
         return sortedResults
 
-    def _format_result(self, line) -> dict:
+
+    def _find_result_in_dict(self, result, results):
+        for record in results:
+            if result["source"] == "Forum" or result["source"] == "Website":
+                if record["content"] in result["content"] or result["content"] in record["content"]:
+                    return record
+
+            elif record["link"] == result["link"] and record["content"] == result["content"]:
+                return record
+
+        return None
+
+    def _format_result(self, line, query) -> dict:
         sanitized_line = line.replace("http:", "http", 1)
         splitted_line = sanitized_line.split(":")
         content = ":".join(splitted_line[1:])
@@ -41,7 +60,7 @@ class Parser:
 
         # more than 5K chars, it's probably a html big file with no line return
         if len(content) > 5000:
-            return
+            content = query
 
         title = self._format_title(splitted_line[0])
         content = content

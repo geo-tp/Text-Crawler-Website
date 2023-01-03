@@ -126,7 +126,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = "/mnt/crawler/media/"
+# MEDIA_ROOT = "/mnt/crawler/media/"
+MEDIA_ROOT = "/home/user/Documents/CODE/Git/alpha_crawler/backend/media/"
+
 
 # Max 10K results for a query
 GREP_MAX_RESULT = 10000
@@ -141,7 +143,8 @@ CORS_ALLOW_METHODS = [
 RESULT_CATEGORY = [
   "Text",
   "Forum",
-  "Website",
+  "Patch-Note",
   "Database",
+  "Website",
   "Various",
 ]

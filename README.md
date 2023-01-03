@@ -76,7 +76,7 @@ In `frontend/` folder, type :
 
 
 Dev Server : 
-```npm start``
+```npm start```
 
 
 Run Build : 

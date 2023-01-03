@@ -5,7 +5,7 @@ import { removeHtmlCharCode } from "../utils/stringUtils";
 
 export const SearchBar = ({ keywords }) => {
   const [currentKeywords, setCurrentKeywords] = useState(
-    keywords ? keywords : ""
+    keywords ? removeHtmlCharCode(keywords) : ""
   );
   const navigate = useNavigate();
 

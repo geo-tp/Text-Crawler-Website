@@ -2,15 +2,24 @@ export const SourcePage = () => {
   const database = [
     "Mangos 1.2 Quests templates",
     "Mangos 1.2 NPC text",
-    "WDB 0.5.5 Quests",
-    "WDB 0.5.5 Creatures",
-    "WDB 0.5.3 Quests",
-    "WDB 0.5.3 GameObjects",
-    "WDB 0.5.3 Creatures",
+    "WDB 0.5.3 Quests, Creatures",
+    "WDB 0.5.5 Quests, Creatures, GameObjects",
+    "WDB 0.6 Creatures",
+    "WDB 0.11 Creatures",
     "WoWPython 2004 Creatures spawn",
-    "Allakhazam 2004 Creature details",
+    "WoWPython 2004 Items details",
+    "Allakhazam 2004 Creatures details",
     "Allakhazam 2004 Quests details",
     "Allakhazam 2004 Items details",
+    "WoWCentral 2004 NPC location list",
+    "WoWCentral 2004 Quests details",
+    "WoWCentral 2004 Atlas",
+    "WorldOfWar 2004 Items details",
+    "Mmhell 2004 NPC & mobs location list",
+    "Mmhell 2004 Items details",
+    "InWoW 2004 professions recipes",
+    "InWoW 2004 mobs by zone",
+    "WCLegacy 2004 Blacksmith recipes",
     "Broadcast texts from classic",
     "Creatures 2004 sniff",
   ];
@@ -19,7 +28,6 @@ export const SourcePage = () => {
     "GenCon 2003",
     "E3 2003",
     "Blizzard Q&A 2003-2004",
-    "Alpha Patch Notes",
     "Alpha Testers Reports",
     "WorldOfWar News & Articles 2004",
     "WorldOfWar Press Deck 2004",
@@ -30,20 +38,39 @@ export const SourcePage = () => {
     "WarCry News & Articles 2002-2004",
     "WarCry Beta Journals 2004",
     "WarCry E3 2003 Coverage",
+    "Mmhell Guides 2004",
+    "Mmhell Beta diary 2004",
+    "Mmhell News & Articles 2003-2004",
+    "WarcraftCentral Articles 2001-2004",
+    "WcLegacy News & Articles 2004",
+    "WCLegacy Guides 2004",
+    "WarcraftStrategy 2004 News & Articles",
+    "WarcraftStrategy 2004 Guides",
+    "WoWGuru 2004 Druid Guide",
   ];
 
   const website = [
-    "WorldOfWar.net 2003-2004 (Partial)",
+    "WorldOfWar 2003-2004 (Partial)",
     "Allakhazam 2004 (Partial)",
     "WoWVault 2004 (Partial)",
+    "GoblinFactory 2004 (Partial)",
+    "Thottbot Beta 2004 (Partial)",
+    "WoWGuru 2004 (Partial)",
+    "Gamona 2004 (Partial)",
+    "Warcry 2004 (Partial)",
   ];
 
   const forum = [
     "WoW Official Forum 2003 2004",
     "WoWVault Topics Of The Week 2004",
+    "Infoceptor Beta Journals Forum Dump 2004",
   ];
 
-  const various = ["Nothing for now"];
+  const patchnote = [
+    "Patch notes from 0.5.3 to 1.2",
+    "Unofficial Alpha Patch Notes",
+    "Unofficial Beta Patch Notes",
+  ];
 
   return (
     <div className="source-page">
@@ -51,27 +78,37 @@ export const SourcePage = () => {
 
       <h2>Database</h2>
       {database.map((source, index) => (
-        <p key={`db-${index}`}>{source}</p>
+        <ul>
+          <li key={`db-${index}`}>{source}</li>
+        </ul>
       ))}
 
       <h2>Text</h2>
       {text.map((source, index) => (
-        <p key={`text-${index}`}>{source}</p>
+        <ul>
+          <li key={`text-${index}`}>{source}</li>
+        </ul>
       ))}
 
       <h2>Website</h2>
       {website.map((source, index) => (
-        <p key={`ste-${index}`}>{source}</p>
+        <ul>
+          <li key={`site-${index}`}>{source}</li>
+        </ul>
       ))}
 
       <h2>Forum</h2>
       {forum.map((source, index) => (
-        <p key={`forum-${index}`}>{source}</p>
+        <ul>
+          <li key={`forum-${index}`}>{source}</li>
+        </ul>
       ))}
 
-      <h2>Various</h2>
-      {various.map((source, index) => (
-        <p key={`various-${index}`}>{source}</p>
+      <h2>Patch Note</h2>
+      {patchnote.map((source, index) => (
+        <ul>
+          <li key={`patch-note-${index}`}>{source}</li>
+        </ul>
       ))}
     </div>
   );

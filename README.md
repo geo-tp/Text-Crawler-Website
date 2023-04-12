@@ -1,7 +1,7 @@
 Text Crawler Website
 ====================
 
-Find string patterns into big dataset of text files, and get the results on a website where you can click on a link to see the full source of each occurences.
+Find string patterns into big dataset of text files and images, and get the results on a website where you can click on a link to see the full source of each occurences.
 
 ![](presentation0.webp)
 ![](presentation1.webp)

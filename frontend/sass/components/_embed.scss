@@ -1,0 +1,15 @@
+.embed {
+    position: fixed;
+    top: 100PX;
+    right: 5%;
+    width: 40%;
+    height: 85%;
+    min-width: 340px;
+    border-radius: 30px;
+    animation: appear-slowly 1s ease;
+
+    @include mobile-design {
+        display: none;
+    }
+
+}

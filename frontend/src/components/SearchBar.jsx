@@ -40,6 +40,7 @@ export const SearchBar = ({ keywords }) => {
           placeholder="Trainers, Holy Light, Thrall, Mulgore, Teebu's Blazing Longsword ..."
           value={currentKeywords}
           onChange={changeKeywords}
+          minLength={3}
         />
       </form>
     </div>

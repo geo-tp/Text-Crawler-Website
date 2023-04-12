@@ -1,11 +1,10 @@
 from main.settings import MEDIA_ROOT, RESULT_CATEGORY
 
-class Parser:
 
+class Parser:
     categories = RESULT_CATEGORY
 
     def format_grep_results(self, results, query) -> list:
-
         formatted_results_by_cat = []
 
         for cat in self.categories:
@@ -13,16 +12,15 @@ class Parser:
 
         splited_results = results.split("\\n")
         for line in splited_results:
-
-            if (line):
+            if line:
                 result = self._format_result(line, query)
 
-                if (result):
+                if result:
                     try:
                         indexOfCat = self.categories.index(result["source"])
                         # formatted_results_by_cat[indexOfCat].append(result)
                     except:
-                        indexOfCat = len(formatted_results_by_cat)-1
+                        indexOfCat = len(formatted_results_by_cat) - 1
 
                     cat_array = formatted_results_by_cat[indexOfCat]
 
@@ -37,14 +35,19 @@ class Parser:
 
         return sortedResults
 
-
     def _find_result_in_dict(self, result, results):
         for record in results:
             if result["source"] == "Forum" or result["source"] == "Website":
-                if record["content"] in result["content"] or result["content"] in record["content"]:
+                if (
+                    record["content"] in result["content"]
+                    or result["content"] in record["content"]
+                ):
                     return record
 
-            elif record["link"] == result["link"] and record["content"] == result["content"]:
+            elif (
+                record["link"] == result["link"]
+                and record["content"] == result["content"]
+            ):
                 return record
 
         return None
@@ -55,10 +58,10 @@ class Parser:
         content = ":".join(splitted_line[1:])
 
         # not a well formatted line
-        if (len(splitted_line) < 2):
+        if len(splitted_line) < 2:
             return
 
-        # more than 5K chars, it's probably a html big file with no line return
+        # more than 5K chars, it's probably a html file with no line return
         if len(content) > 5000:
             content = query
 
@@ -67,7 +70,7 @@ class Parser:
         link = self._format_link(splitted_line[0])
         source = self._format_source(splitted_line[0])
 
-        return {"link":link, "title":title, "content": content, "source": source }
+        return {"link": link, "title": title, "content": content, "source": source}
 
     def _format_link(self, line):
         line = line.replace("http", "http:", 1)
@@ -80,9 +83,9 @@ class Parser:
 
     def _format_source(self, line) -> str:
         splitted_line = line.split("/")
-        
+
         try:
-            media_type_index = splitted_line.index("media") +1
+            media_type_index = splitted_line.index("media") + 1
         except:
             media_type_index = 0
 
@@ -91,8 +94,7 @@ class Parser:
     def _format_title(self, title) -> str:
         return title.split("media/").pop()
 
-    def _format_content(self, content) ->str:
-        
+    def _format_content(self, content) -> str:
         # more than 5K chars
         if len(content) > 5000:
             content = content[0:5000]

@@ -19,14 +19,20 @@
 @import "./components/loader";
 @import "./components/error-message";
 @import "./components/caching-message";
+@import "./components/magnifier";
+@import "./components/lightbox";
+@import "./components/image-result";
+@import "./components/embed";
+@import "./components/fixed-button";
 
 // CONTAINERS
 @import "./containers/centered-container";
 @import "./containers/result-container";
 @import "./containers/pagination-container";
 @import "./containers/modal-container";
+@import "./containers/image-result-container";
 
 // PAGES
-@import "./pages/homepage.scss";
-@import "./pages/source-page.scss";
+@import "./pages/homepage";
+@import "./pages/source-page";
 @import "./pages/search-page";

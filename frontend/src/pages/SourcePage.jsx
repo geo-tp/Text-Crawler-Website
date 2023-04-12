@@ -20,6 +20,11 @@ export const SourcePage = () => {
     "InWoW 2004 professions recipes",
     "InWoW 2004 mobs by zone",
     "WCLegacy 2004 Blacksmith recipes",
+    "WarcraftStrategy quest details June 2004",
+    "WarcraftStrategy creatures list June 2004",
+    "WarcraftStrategy items details June 2004",
+    "WoWVault quests details April 2004",
+    "WoWVault items details April 2004",
     "Broadcast texts from classic",
     "Creatures 2004 sniff",
   ];
@@ -58,12 +63,21 @@ export const SourcePage = () => {
     "WoWGuru 2004 (Partial)",
     "Gamona 2004 (Partial)",
     "Warcry 2004 (Partial)",
+    "Infoceptor 2004 (Partial)",
+    "UltimateGamers 2004 (Partial)",
+    "KingOfAzeroth 2004 (Partial)"
   ];
 
   const forum = [
     "WoW Official Forum 2003 2004",
-    "WoWVault Topics Of The Week 2004",
-    "Infoceptor Beta Journals Forum Dump 2004",
+    "WoW Beta Official Forum 2004",
+    "WoWVault Forum 2004",
+    "Infoceptor Beta Journals Forum 2004",
+    "Allakhazam Forum 2004",
+    "LurkerLounge Forum 2004",
+    "TheSafeHouse Forum 2004",
+    "TheDruidGrove Forum 2004",
+    "WarCry Forum 2004"
   ];
 
   const patchnote = [
@@ -103,13 +117,18 @@ export const SourcePage = () => {
           <li key={`forum-${index}`}>{source}</li>
         </ul>
       ))}
-
       <h2>Patch Note</h2>
       {patchnote.map((source, index) => (
         <ul>
           <li key={`patch-note-${index}`}>{source}</li>
         </ul>
       ))}
+
+      <h2>Image</h2>
+      <ul>
+        <li>Screenshots from Alpha Archive</li>
+      </ul>
+
     </div>
   );
 };

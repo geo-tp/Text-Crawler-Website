@@ -1,5 +1,4 @@
 export const ErrorMessage = ({ error }) => {
-  console.log(error);
   return (
     <div className="error-message">
       <p>

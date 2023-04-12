@@ -20,7 +20,8 @@ Provide a dataset to the crawler on your server, it could be scrapped website, t
 
 Then you will be able to search for string pattern on the website and see all the occurences and sources. 
 
-The crawler uses the power of the GNU `grep` command to be able to return fast results.
+The crawler uses the power of the GNU `grep` command to be able to return fast results. 
+It could also find string pattern into images (generic AI OCR models)
 
 
 

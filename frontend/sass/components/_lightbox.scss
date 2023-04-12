@@ -1,0 +1,72 @@
+.lightbox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 80%;
+    height: 100vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.885);
+    align-items: center;
+    animation: appear-slowly 200ms linear;
+  
+    &__images-count {
+      position: fixed;
+      background-color: $color-bg;
+      color: color-text;
+      left: 10px;
+      bottom: 1%;
+      border-radius: 5px;
+      z-index: 10;
+      padding: 5px;
+      font-weight: bold;
+    }
+  
+    &__filename {
+      position: absolute;
+      right: 10px;
+      bottom: 0%;
+      height: 20px;
+      z-index: 50;
+      border: 1px solid $color-bg2;
+      background-color: $color-bg;
+      color: color-text;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    &__arrow {
+        background-color: transparent;
+        color: $color-text;
+        border: none;
+        margin: 5px;
+
+    }
+
+    &__close {
+        color: $color-text;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 2em;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        z-index: 50;
+        &:hover {
+          opacity: 0.6;
+        }
+      
+        @include tablet-design {
+          top: 30px;
+        }
+      
+        @include mobile-design {
+          top: 50px;
+        }
+    }
+  }
+  

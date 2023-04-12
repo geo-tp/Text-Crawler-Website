@@ -1,4 +1,3 @@
-import { API_URL } from "../config/general";
 
 export const fetchJson = async (url) => {
   return fetch(url)

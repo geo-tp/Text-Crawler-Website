@@ -1,0 +1,43 @@
+.image-result-container {
+
+    
+    margin-right: 150px;
+    max-width: 800px;
+    margin-top: 30px;
+
+    &__mention {
+        font-size: 0.8em;
+        white-space: nowrap;
+        color: #bdc1c5;
+        font-weight: 300;
+    }
+    
+    &__images {
+        overflow-x: scroll;
+        border: 1px solid $color-bg2;
+        display: flex;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        padding: 20px;
+        border-radius: 5px;
+
+        &::-webkit-scrollbar {
+            background-color: black; 
+            border-radius: 2px;
+        }
+   
+        &::-webkit-scrollbar-track {
+            background: $color-bg;
+        }
+   
+        &::-webkit-scrollbar-thumb {
+            background: $color-bg2; 
+        }
+  
+
+    }
+
+    @include tablet-design {
+        margin-right: 15px;
+      }
+}

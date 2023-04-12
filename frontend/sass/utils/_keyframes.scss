@@ -7,3 +7,16 @@
     opacity: 1;
   }
 }
+
+@keyframes blink {
+  20% {
+    transform: scale(1.2);
+
+  }
+
+  100% {
+    transform: scale(1.0);
+
+  }
+}
+

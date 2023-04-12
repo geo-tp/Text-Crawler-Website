@@ -2,7 +2,7 @@ export const NoResult = ({ keywords }) => {
   return (
     <div className="no-result">
       <p>
-        There is no result for your string pattern (<b>{keywords}</b>)
+        There is no text result for your string pattern (<b>{keywords}</b>)
       </p>
       <h3>Hints</h3>
       <ul>
@@ -24,6 +24,7 @@ export const NoResult = ({ keywords }) => {
         </li>
         <li>Regexp are not allowed, you must use a basic string.</li>
         <li>Results are limited to 10 000 for a pattern.</li>
+        <li>To have a better chance of having an image corresponding to a resource, try to use the most reliable word, for example: "Tarnished Chain Vest", you could try to use only the keyword "Tarnished".</li>
       </ul>
     </div>
   );

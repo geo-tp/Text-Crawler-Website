@@ -1,0 +1,22 @@
+.fixed-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 100%;
+    padding: 20px;
+    background-color: $color-bg2;
+    border: 1px solid $color-text;
+    color: $color-text;
+    cursor: pointer;
+    animation: blink 1s;
+    animation-iteration-count: 6;
+    transition: all 300ms;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    @include mobile-design {
+        display: none;
+    }
+}
